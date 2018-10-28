@@ -1,0 +1,40 @@
+html {
+  background: url("./background.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+.drumset {
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+}
+
+.drumkey {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 1.5rem;
+  height: 50px;
+  width: 50px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border: 1px solid yellow;
+  transition: all 0.07s;
+
+  &.pressed {
+    transform: scale(1.25);
+  }
+
+  .letter {
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: white;
+  }
+
+  .sound {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: yellow;
+  }
+}
